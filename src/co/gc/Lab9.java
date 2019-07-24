@@ -18,6 +18,11 @@ public class Lab9 {
 		System.out.println("Welcome to the flower shop!");
 		System.out.println();
 		
+		displayTable(inventory);
+		
+	}
+	
+	public static void displayTable(Map<String, Double> inventory) {
 		System.out.printf("%-30s", "Item");
 		System.out.printf("%-30s", "Price");
 		System.out.println();
@@ -25,9 +30,8 @@ public class Lab9 {
 		
 		for(String key : inventory.keySet()) {
 			System.out.printf("%-30s", key);
-			System.out.printf("%-30s", "$" + inventory.get(key));
+			System.out.print("$" + inventory.get(key));
 			System.out.println();
-		}
-		
+		}	
 	}
 }
